@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Permissions</title>
+    <link rel="stylesheet" href="../tailwind.css">
+</head>
+
+<body class="bg-blue-100 overflow-hidden">
+    <div class="w-20p float-right h-screen overflow-x-hidden  bg-gray-100 overflow-y-auto">
+        <div class="bg-white border-b pb-2">
+            <div class="flex pt-3 items-center">
+                <div class="ml-3 opacity-75">
+                    <svg class="" width="18" height="18" viewBox="0 -3 24 24">
+                        <g fill="none" fill-rule="evenodd">
+                            <polygon points="0 0 24 0 24 24 0 24" />
+                            <path fill="#000" fill-rule="nonzero"
+                                d="M4.29289322,11.2928932 L11.2928932,4.29289322 C11.6834175,3.90236893 12.3165825,3.90236893 12.7071068,4.29289322 C13.0675907,4.65337718 13.0953203,5.22060824 12.7902954,5.61289944 L12.7071068,5.70710678 L7.414,11 L19,11 C19.5128358,11 19.9355072,11.3860402 19.9932723,11.8833789 L20,12 C20,12.5128358 19.6139598,12.9355072 19.1166211,12.9932723 L19,13 L7.414,13 L12.7071068,18.2928932 C13.0675907,18.6533772 13.0953203,19.2206082 12.7902954,19.6128994 L12.7071068,19.7071068 C12.3466228,20.0675907 11.7793918,20.0953203 11.3871006,19.7902954 L11.2928932,19.7071068 L4.29289322,12.7071068 C3.93240926,12.3466228 3.90467972,11.7793918 4.20970461,11.3871006 L4.29289322,11.2928932 L11.2928932,4.29289322 L4.29289322,11.2928932 Z" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="ml-5 font-medium">User Permissions</div>
+            </div>
+        </div>
+        <div class="m-3 pt-2">
+            <div class="select-none text-xs flex items-center">
+                <div>
+                    <img class="w-9 rounded-full h-9" src="../password.PNG" alt="" srcset="">
+                </div>
+                <div class="ml-2">
+                    <div class="font-medium ">Bruse Springstin</div>
+                    <div class="text-xxs text-gray-500">Last seen recently</div>
+                </div>
+
+            </div>
+            <div class="mx-2 my-5 text-xs text-gray-600">
+                What can this user do?
+            </div>
+            <div class="m-3 font-medium">
+                <div class="md-checkbox pb-3 text-xs">
+
+                    <input id="i11" type="checkbox" checked>
+                    <label for="i11">Send Messages</label>
+                </div>
+                <div class="md-checkbox pb-3 text-xs">
+
+                    <input id="i12" type="checkbox" checked>
+                    <label for="i12">Send Media</label>
+                </div>
+                <div class="md-checkbox pb-3 text-xs">
+
+                    <input id="i13" type="checkbox" checked>
+                    <label for="i13">Send Stickers and GIFs</label>
+                </div>
+                <div class="md-checkbox pb-3 text-xs">
+
+                    <input id="i14" type="checkbox" checked>
+                    <label for="i14">Send Polls</label>
+                </div>
+                <div class="md-checkbox pb-3 text-xs">
+
+                    <input id="i15" type="checkbox" checked>
+                    <label for="i15">Send Links</label>
+                </div>
+                <div class="md-checkbox pb-3 text-xs">
+
+                    <input id="i16" type="checkbox" checked>
+                    <label for="i16">Add Users</label>
+                </div>
+                <div class="md-checkbox pb-3 flex text-xs">
+
+                    <div class="mr-5 opacity-75">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                  <polygon points="0 0 24 0 24 24 0 24"/>
+                                  <path fill=red fill-rule="nonzero" d="M18,3 C19.6568542,3 21,4.34314575 21,6 L21,18 C21,19.6568542 19.6568542,21 18,21 L6,21 C4.34314575,21 3,19.6568542 3,18 L3,6 C3,4.34314575 4.34314575,3 6,3 L18,3 Z M16,11 L8,11 C7.44771525,11 7,11.4477153 7,12 C7,12.5522847 7.44771525,13 8,13 L16,13 C16.5522847,13 17,12.5522847 17,12 C17,11.4477153 16.5522847,11 16,11 Z"/>
+                                </g>
+                              </svg>
+                    </div>
+                    <div for="i17 ">Pin Messages</div>
+                </div>
+                <div class="md-checkbox pb-3 flex text-xs">
+
+                    <div class="mr-5 opacity-75">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd">
+                                      <polygon points="0 0 24 0 24 24 0 24"/>
+                                      <path fill=red fill-rule="nonzero" d="M18,3 C19.6568542,3 21,4.34314575 21,6 L21,18 C21,19.6568542 19.6568542,21 18,21 L6,21 C4.34314575,21 3,19.6568542 3,18 L3,6 C3,4.34314575 4.34314575,3 6,3 L18,3 Z M16,11 L8,11 C7.44771525,11 7,11.4477153 7,12 C7,12.5522847 7.44771525,13 8,13 L16,13 C16.5522847,13 17,12.5522847 17,12 C17,11.4477153 16.5522847,11 16,11 Z"/>
+                                    </g>
+                                  </svg>
+                    </div>
+                    <div for="i17 ">Change Chat Info</div>
+                </div>
+            </div>
+        </div>
+        <div class="border-b mt-3"></div>
+        <div class="px-6 mt-5">
+            <label class="flex items-center">
+                        <div
+                            class="opacity-75">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                  <polygon points="0 0 24 0 24 24 0 24"/>
+                                  <path fill=red fill-rule="nonzero" d="M9,13 C12.3229116,13 14.7530244,13.8337117 16.2223821,15.5699359 C16.724477,16.1632234 17,16.915291 17,17.6925226 L17,18.5 C17,19.8807119 15.8807119,21 14.5,21 L3.5,21 C2.11928813,21 1,19.8807119 1,18.5 L1,17.6925204 C1,16.9152876 1.2755246,16.1632192 1.77762117,15.569932 C3.24697824,13.8337108 5.67709024,13 9,13 Z M9,15 C6.21130036,15 4.33538166,15.6435809 3.30428673,16.861943 C3.10781409,17.0940989 3,17.3883868 3,17.6925212 L3,18.5 C3,18.7761424 3.22385763,19 3.5,19 L14.5,19 C14.7761424,19 15,18.7761424 15,18.5 L15,17.6925226 C15,17.3883883 14.8921864,17.0941004 14.6957148,16.8619448 C13.6646202,15.6435815 11.788701,15 9,15 Z M16,10 L22,10 C22.5522847,10 23,10.4477153 23,11 C23,11.5128358 22.6139598,11.9355072 22.1166211,11.9932723 L22,12 L16,12 C15.4477153,12 15,11.5522847 15,11 C15,10.4871642 15.3860402,10.0644928 15.8833789,10.0067277 L16,10 L22,10 L16,10 Z M9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 Z M9,5 C7.8954305,5 7,5.8954305 7,7 C7,8.1045695 7.8954305,9 9,9 C10.1045695,9 11,8.1045695 11,7 C11,5.8954305 10.1045695,5 9,5 Z"/>
+                                </g>
+                              </svg>
+                              
+                              
+                              
+                        </div>
+                        <div class="text-xs mx-5 items-center">
+                            <div>
+                                <div class="font-medium text-red-600">Ban and Remove From Group</div>
+                            </div>
+
+                        </div>
+                    </label>
+        </div>
+    </div>
+</body>
+
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto);
+    .md-checkbox {
+        position: relative;
+        margin: 1em 0;
+        text-align: left;
+    }
+    
+    .md-checkbox.md-checkbox-inline {
+        display: inline-block;
+    }
+    
+    .md-checkbox label {
+        cursor: pointer;
+        display: inline;
+        line-height: 1.25em;
+        vertical-align: top;
+        clear: both;
+        padding-left: 1px;
+    }
+    
+    .md-checkbox label:not(:empty) {
+        padding-left: 2em;
+    }
+    
+    .md-checkbox label:before,
+    .md-checkbox label:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    .md-checkbox label:before {
+        width: 1.25em;
+        height: 1.25em;
+        background: #fff;
+        border: 2px solid rgba(0, 0, 0, 0.54);
+        border-radius: 0.125em;
+        cursor: pointer;
+        transition: background .3s;
+    }
+    
+    .md-checkbox input[type="checkbox"] {
+        outline: 0;
+        visibility: hidden;
+        width: 1.25em;
+        margin: 0;
+        display: block;
+        float: left;
+        font-size: inherit;
+    }
+    
+    .md-checkbox input[type="checkbox"]:checked+label:before {
+        background: #6BB4FB;
+        border: none;
+    }
+    
+    .md-checkbox input[type="checkbox"]:checked+label:after {
+        transform: translate(0.25em, 0.3365384615em) rotate(-45deg);
+        width: 0.75em;
+        height: 0.375em;
+        border: 0.125em solid #fff;
+        border-top-style: none;
+        border-right-style: none;
+    }
+    
+    .md-checkbox input[type="checkbox"]:disabled+label:before {
+        border-color: rgba(0, 0, 0, 0.26);
+    }
+    
+    .md-checkbox input[type="checkbox"]:disabled:checked+label:before {
+        background: rgba(0, 0, 0, 0.26);
+    }
+</style>
+
+</html>
