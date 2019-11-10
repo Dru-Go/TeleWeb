@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pure CSS speech bubbles like telegram desktop</title>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+    <link rel="stylesheet" href="../tailwind.css">
+
+</head>
+
+<body class="bg-blue-200">
+    <!-- clip pathes for droplet(?) in the bottom left/right of the message bubble -->
+    <svg height="0" width="0">
+        <defs>
+            <clipPath id="left-droplet">
+                <path d="M 10,0 A 10,10 0 0 1 0,10 H 16 V 0 Z">
+            </clipPath>
+            <clipPath id="right-droplet">
+                <path d="M 6,0 A 10,10 0 0 0 16,10 H 0 V 0 Z">
+            </clipPath>
+        </defs>
+    </svg>
+
+    <section class="chat__body ">
+        <div class="chat__loader">
+            <div class="messages">
+                <!-- <div class="spinner"></div> -->
+            </div>
+            <div class="flex w-full items-end">
+                <div class="px-1">
+                    <img src="../overlay.png" class="w-8 h-8 my-2 rounded-full" alt="">
+                </div>
+                <div class="message  droplet">
+                    <div class="message__text">
+                        <div>bbadsd</div>
+                        <div class="message__text__content text-sm font-sans font-medium pb-2 ">
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur quae neque itaque architecto, dolorum a assumenda nihil excepturi alias voluptates pariatur, repellendus illum corrupti omnis eos sed eum autem explicabo!
+
+                            </div>
+                            <div class="message__time mt-4 mr-2">18:12</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex w-full items-end">
+                <div class="px-1">
+                    <img src="../overlay.png" class="w-8 h-8 my-2 rounded-full" alt="">
+                </div>
+                <div class="message  droplet">
+                    <div class="message__image__text">
+                        <div class="message__text__content pb-2">
+                            <div class="">
+                                <img src="../lucy-lee.png" class="rounded-t-lg w-full" alt="">
+                                <div class=" text-sm  pl-2">This is the image i was telling you about 😇</div>
+                            </div>
+                            <div class="message__time mr-2">18:12</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+</body>
+
+<style>
+    /*Downloaded from https://www.codeseek.co/sattellite/pure-css-speech-bubbles-like-telegram-desktop-bRaBEx */
+    
+    *,
+     :after,
+     :before {
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .chat__body {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://raw.githubusercontent.com/telegramdesktop/tdesktop/dev/Telegram/Resources/art/bg_initial.jpg");
+        background-position-y: -54px;
+        background-attachment: fixed;
+    }
+    
+    .messages {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: flex-end;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 6px;
+    }
+    
+    .chat__loader {
+        flex-grow: 1;
+        /* display: flex; */
+        align-self: center;
+        justify-content: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    .chat__loader .spinner {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(38, 50, 56, .5);
+        border-radius: 50%;
+        align-self: center;
+    }
+    
+    .chat__loader .spinner:after {
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        display: block;
+        content: '';
+        width: 22px;
+        height: 22px;
+        border-left-color: #fff;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        border-width: 3px;
+        border-style: solid;
+        -webkit-animation: spin .8s linear infinite;
+        animation: spin .8s linear infinite;
+    }
+    
+    @-webkit-keyframes spin {
+        from {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes spin {
+        from {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    
+    .message {
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        position: relative;
+        min-height: 30px;
+        max-width: 420px;
+        background-color: #fff;
+        margin-bottom: 8px;
+        /* border-radius: 6px; */
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        z-index: 2;
+        box-shadow: 0 2px 1px 0 rgba(160, 172, 182, .5);
+    }
+    
+    .message-image {
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        position: relative;
+        min-height: 30px;
+        max-width: 420px;
+        background-color: #fff;
+        margin-bottom: 8px;
+        border-radius: 8px;
+        /* z-index: 2; */
+        box-shadow: 0 2px 1px 0 rgba(160, 172, 182, .5);
+    }
+    
+    .message.my-message {
+        align-self: flex-end;
+        background-color: transparent;
+        box-shadow: 0 2px 1px 0 rgba(93, 196, 82, .5);
+    }
+    
+    .message.droplet:before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: -8px;
+        width: 12px;
+        height: 1px;
+        background-color: inherit;
+        z-index: 1;
+        box-shadow: 0px 1px 1px 1px rgba(160, 172, 182, .5);
+    }
+    
+    .message.droplet:after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: -10px;
+        width: 16px;
+        height: 10px;
+        -webkit-clip-path: url(#left-droplet);
+        clip-path: url(#left-droplet);
+        background-color: inherit;
+        z-index: 1;
+        box-shadow: 0 2px 1px 0 rgba(160, 172, 182, .5);
+    }
+    
+    .message.my-message.droplet:before {
+        right: -8px;
+        left: initial;
+        box-shadow: 0px 1px 1px 1px rgba(93, 196, 82, .5);
+    }
+    
+    .message.my-message.droplet:after {
+        right: -10px;
+        left: initial;
+        -webkit-clip-path: url(#right-droplet);
+        clip-path: url(#right-droplet);
+    }
+    
+    .message__text .message__text__content {
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        z-index: 2;
+    }
+    
+    .message__image__text {
+        z-index: 2;
+    }
+    
+    .message__time {
+        display: inline-block;
+        float: right;
+        border: black;
+        text-align: center;
+        font-size: 10px;
+        color: #a0acb6;
+    }
+</style>
+
+</html>
